@@ -26,3 +26,28 @@ const myFunction=function(){
 // console.log(typeof heros);
 // console.log(typeof myObj);
 // console.log(typeof myFunction);
+
+
+
+/*************************************/
+
+//Stack (Primitive)  , Heap(Non Premitive)
+
+let name="mansi"
+let anothername=name
+anothername="akndsq"
+console.log(name)
+console.log(anothername)
+
+let userOne={
+    email:"nsibdd",
+    upi:"msodq",
+}
+
+let userTwo=userOne
+
+userTwo.email="nasidue"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
