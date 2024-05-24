@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom learning</title>
+</head>
+<body>
+    <div class="mansi">
+        <h1 id="civi" class="nich">Nichta</h1>
+        <h2> loabj kasiad</h2>
+        <h2> loabj kasiad jsdu sadioho</h2>
+
+
+
+        <p>mere bhai sab nich hai aur main maha nich hu</p>
+
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list">One</li>
+            <li class="list">  Two</li>
+
+            <li class="list">Three</li>
+
+        </ul>
+    </div>
+</body>
+</html>
+
+<!-- In Browser -->
+
+<!-- 
+
+console.log(document)
+console.log(document.baseURL)
+console.log(document.links)  give html collection of links on given page 
+console.log(document.links[4])  
+
+document.getElementById("firstname")   --- select this id tag completely
+document.getElementById("firstname").innerHtml="<h3> mansi and uske pagal bhai</h3>"
+
+-->
+
+
+<!-- 
+
+
+document.getElementById("civi")
+document.getElementById("civi").id
+document.getElementById("civi").class
+document.getElementById("civi").className
+document.getElementById("civi").getAttribute('id')
+document.getElementById("civi").getAttribute('class')
+
+document.getElementById("civi").setAttribute('class','test')  override the current class name 
+document.getElementById("civi").setAttribute('class','test nich')  return class= test nich
+
+
+-->
+
+
+<!-- 
+
+
+title.style.background="red"
+
+title.style.padding="50px"
+'
+title.style.borderRadius="5px"
+
+title.textContent  ---- this show all text hidden not hidden 
+
+title.innerHTML   ----- this give all htmt content also not only texts 
+
+title.innerText   ---- this show only the text that is display on screen 
+
+-->
+
+<!-- Query selection -->
+
+<!-- 
+    
+document.querySelector('h2')
+document.querySelector('#civi')
+document.querySelector('.nich') 
+
+document.querySelector('input[type="password"]')
+
+
+document.querySelector('ul')
+const list=document.querySelector('ul')
+list.querySelctor('li')
+const mycol=list.querySelctor('li')
+mycol.style.backgroundColor="green"
+mycol.innerText="mansi"
+
+
+NodeList
+
+
+document.querySelectorAll('li')
+NodeList(3) [li, li, li]   -- not array
+0: li
+1: li
+2: li
+length: 3
+[[Prototype]]: NodeList
+const temp=document.querySelectorAll('li')
+temp[0].style.color="yellow"
+
+temp.forEach((l)=>{
+l.style.backgroundColor="green"
+})
+
+
+HTMLCollection
+
+document.getElementsByClassName('list')  
+
+
+HTMLCollection(3) [li.list, li.list, li.list]
+0: li.list
+1: li.list
+2: li.list
+length: 3
+[[Prototype]]: HTMLCollection
+
+
+const temclass= document.getElementsByClassName('list')  
+Array.from(tempclass)
+const covarray= Array.from(tempclass)
+
+-->
+
