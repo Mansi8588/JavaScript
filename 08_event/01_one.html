@@ -32,33 +32,45 @@
 
     document.getElementById('owl').addEventListener('click', function(){
         alert("clicked owl the ul");
-    }, false) 
+    }, false)   // --- false/true is event propogation - false = event public , true = Capturing move
     
 
      // attachEvent()
     // jQuery - on
 
-    // type, timestamp, defaultPrevented
-    // target, toElement, srcElement, currentTarget,
+    // type(keyboard ,mouse type event), timestamp(date activity change), defaultPrevented
+    // target, toElement, srcElement---, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
-    // document.getElementById('images').addEventListener('click', function(e){
-    //     console.log("clicked inside the ul");
-    // }, false) -- 
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+        // console.log(e)
+    }, false) -- 
+  
+
+//   --- as owl come inside image so when owl click if deafult is false then owl function execute first
+//    otherwise if true then image execute first  
+// its a bubble event - inside event execute first (false)
+
 
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
-    //     e.stopPropagation()
+
+    //e.stopPropagation()  ---- this stop the executuion of upper event as example image function execturion not occure 
+
     // }, false)
     
+
+
     // document.getElementById('google').addEventListener('click',function(e){
     //     e.preventDefault();
     //     e.stopPropagation()
     //     console.log("google clicked");
     // }, false)
    
-    
+     
+
     // document.querySelector('#images').addEventListener('click', function(e){
     //     console.log(e.target.tagName);
     //     if (e.target.tagName === 'IMG') {
@@ -71,5 +83,7 @@
     // })
     
     //removeIt.parentNode.removeChild(removeIt)
+
+
 </script>
 </html>
