@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc and chai</title>
+</head>
+<body>
+    <ul class="language">
+ 
+        <li> JavaScript </li>
+
+    </ul>
+</body>
+<script>
+
+    function addLang(langName) {
+       const li= document.createElement('li')
+       li.innerHTML=`${langName}`  // complete tree traversing
+       document.querySelector('.language').appendChild(li)
+    }
+    addLang("Python")
+    addLang("Java")
+
+    function addOpLang(langName) {
+        const li= document.createElement('li')
+       li.appendChild(document.createTextNode(langName))  // no traversing
+       document.querySelector('.language').appendChild(li)
+    }
+
+    addOpLang('readct')
+
+    // Edit 
+
+    const seclan=document.querySelector("li:nth-child(2)")
+    // seclan.innerHTML="mansi"
+   const nli=document.createElement('li')
+   nli.textContent="ruby"
+   seclan.replaceWith(nli)
+
+   const firlan=document.querySelector("li:first-child")
+   firlan.outerHTML='<li> mais </li>'
+
+   // remove
+   const lastch=document.querySelector('li:last-child')
+   lastch.remove()
+
+
+</script>
+</html>
