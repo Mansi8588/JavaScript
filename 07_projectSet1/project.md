@@ -41,7 +41,6 @@ buttons.forEach((button) => {
 
 
 
-# Solution code
 
 ## project 2
 
@@ -63,6 +62,26 @@ form.addEventListener('submit', function (e) {
     results.innerHTML = `<span>${BMI}</span>`;
   }
 });
+
+
+```
+
+## Project 3
+``` javascript 
+
+const clock=document.getElementById('clock')
+// const clock=document.querySelector('#clock')
+
+let date=new Date();
+
+// run after 1sec 2sec we use setInterval
+setInterval(function(){
+  let date=new Date();
+  // console.log(date.toLocaleTimeString());
+  clock.innerHTML=date.toLocaleTimeString()
+},1000)
+
+
 
 
 ```
